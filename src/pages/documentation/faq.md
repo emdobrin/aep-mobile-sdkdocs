@@ -107,11 +107,11 @@ iOS
 
 The sizes in the table are provided for estimation purposes only, with the following considerations:
 
-* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
+* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions.
   * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
-* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size).
 * The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
-* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
+* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile).
 
 ### How can I use ProGuard with the Android SDK?
 
@@ -167,16 +167,16 @@ To fix this build failure, you can follow one of two options:
 - Add the listed compileOptions from the error message to your app-level build.gradle file.
 - Increase the minSdkVersion for your Android project to **26** or above.
 
-### How do I get the latest Mobile SDK Android dependences for my Application? 
+### How do I get the latest Mobile SDK Android dependences for my Application?
 
 To get the latest Mobile SDK dependencies for your Android application:
-* Open the **mobile property** configured in the **Data Collection UI** for your application. 
-* Navigate to the **Extensions** tab and update all the extensions to the latest version. 
+* Open the **mobile property** configured in the **Data Collection UI** for your application.
+* Navigate to the **Extensions** tab and update all the extensions to the latest version.
 * The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
 
 ### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
 
-The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK. 
+The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK.
 
 If you attempt to use the latest Mobile Core SDK and solution SDKs that were built for previous versions of Mobile Core to build your app, you may encounter the following error:
 
@@ -188,7 +188,7 @@ If you attempt to use the latest Mobile Core SDK and solution SDKs that were bui
 
 To resolve this error, upgrade all your solution SDKs to the [most recent versions](./current-sdk-versions.md#android).
 
-### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android? 
+### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android?
 
 The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
 
@@ -199,13 +199,13 @@ com.adobe.marketing.mobile:signal:2.+
 com.adobe.marketing.mobile:identity:2.+
 ```
 
-### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 
+### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services?
 
-Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app. 
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app.
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
-After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard.
 
 ```
 Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
@@ -274,9 +274,7 @@ See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 
-### Does the Edge Network extension support offline tracking?
-
-Yes, offline tracking is supported by default when sending XDM Experience events since these events have a required timestamp, and there is no separate setting for this as it used to be in the Adobe Analytics extension. The events are backed up in the persistence layer and then sent to the Edge Network in current session if possible, or queued until the next session when a network connection is available.
+See the [frequently asked questions for Edge Network](./edge-network/faq.md).
 
 ## Get help
 
