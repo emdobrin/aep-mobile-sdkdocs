@@ -23,5 +23,6 @@ jobs:
           name: ${{ env.TAG_DATE }} - Deployment ${{ github.run_id }}
           tag: ${{ github.run_id }}
           version: ${{ github.run_id }}
+          publish: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
