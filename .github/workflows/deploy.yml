@@ -15,7 +15,7 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "TAG_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        run: echo "TAG_DATE=$(TZ="America/Los_Angeles" date +'%Y-%m-%d')" >> $GITHUB_ENV
       - name: Create GitHub release tag
         id: create_release
         uses: release-drafter/release-drafter@v5
